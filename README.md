@@ -6,7 +6,7 @@
 
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
-4. [Architecture](#architecture)
+4. [Render URL]
 5. [Installation](#installation)
 6. [Usage](#usage)
 7. [API Endpoints](#api-endpoints)
@@ -105,14 +105,18 @@ Provide instructions and examples for using the project.
 - **POST https://artvista-backend-3ycc.onrender.com/getcart** - Get cart by ID BY USER
 
 ## Database Schema
+
 ### User Model
 ```json
-{
-  name: { type: String, required: true },
-  email: { type: String, unique: true, required: true }, // Added `required: true` to ensure 
-  password: { type: String, required: true },
-  cartData: { type: Object,default:{}},
+
+ {
+  "name": "String",
+  "email": "String",
+  "password": "String",
+  "cartData": "Object"
 }
+
+
 ```
 ### Product Model
 ```json
@@ -131,13 +135,13 @@ Provide instructions and examples for using the project.
 ### Order Model
 ```json
 {
-  userId: { type: String, required: true },
-  items: { type: Array, required: true },
-  amount: { type: Number, required: true },
-  address: { type: Object, required: true },
-  status: { type: String, default: "Processing Order" },
-  date: { type: Date, default: Date.now() },
-  payment: { type: Boolean, default: false }
+ "userId": "String",
+  "items": "Array",
+  "amount": "Number",
+  "address": "Object",
+  "status": "String",
+  "date": "Date",
+  "payment": "Boolean"
 }
 ```
 
